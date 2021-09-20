@@ -4,8 +4,6 @@ import com.example.demo.entity.AbstractFood;
 import com.example.demo.entity.Drinkable;
 import com.example.demo.entity.Soup;
 import com.example.demo.entity.Stew;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,15 +20,14 @@ public class DemoApplication {
         menu.add(beefStew);
 
 //        menu.forEach(AbstractFood::displayName);
-
-
-        // same as
+		
+        // same as the above line is equivalent to:
         for (int i = 0; i < menu.size(); i++){
             menu.get(i).displayName();
         }
 
         System.out.println("-------------------------");
-//
+// Interfaces can be used as types too just like abstract classes
 //        List<Drinkable> drinkList = new ArrayList<>();
 //        drinkList.add(new Soup(100, "Tomato Soup"));
 //        drinkList.add(new Stew("Canadian Stew"));
